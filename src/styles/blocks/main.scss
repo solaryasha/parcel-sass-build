@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  padding: 10px 20px;
+
+  background-image: url(../images/Image_created_with_a_mobile_phone.png);
+  background-repeat: no-repeat;
+}
+
+.main__content {
+  max-width: 840px;
+  margin: 0 auto;
+}

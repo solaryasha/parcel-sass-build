@@ -1,0 +1,76 @@
+/* #region Nav */
+
+.nav__toggler {
+  display: block;
+  margin: 0 20px;
+  padding: 10px 5px;
+
+  color: #fff;
+  font-size: 20px;
+
+  transition: color 0.3s;
+
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  @include onDesktop {
+    display: none;
+  }
+
+  @include onTablet {
+    background-color: #1fc8db;
+  }
+
+  &:hover {
+    color: #1fc8db;
+  }
+
+  &::before {
+    content: '=';
+  }
+}
+
+.nav--open .nav__toggler::before {
+  content: 'x';
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 0;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  overflow: hidden;
+}
+
+.nav__list--active {
+  height: 100vh;
+}
+
+@media (min-width: 640px) {
+  .nav__list {
+    flex-direction: row;
+    height: auto;
+  }
+}
+
+.nav__link {
+  display: block;
+  margin: 0 20px;
+  padding: 10px 5px;
+
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+
+  transition: color 0.3s;
+}
+
+.nav__link:hover {
+  color: #1fc8db;
+}
